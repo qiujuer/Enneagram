@@ -37,13 +37,13 @@ function nineEnd() {
     for (var i = 0; i < nine_value.length; i++) {
         radar.datasets[0].points[i].value = nine_value[i];
     }
-    radar.update(1);
+    radar.update();
 };
 
 $(document).ready(function () {
     var ctx = document.getElementById("canvas").getContext("2d");
     var radarChartData = {
-        labels: ["1", "2", "3", "4", "5", "6", "7", "8", "9"],
+        labels: ["完美型", "助人型", "成就型", "自我型", "理智型", "疑惑型", "活跃型", "领袖型", "和平型"],
         datasets: [
             {
                 label: "Nine",
@@ -61,7 +61,7 @@ $(document).ready(function () {
         responsive: true
     });
 
-    $("button[name='nine_c']").click(function (i) {
+    $("button[name='nine_c']").click(function () {
         var item = $(this);
         nineOut(function () {
             getValues(item);
