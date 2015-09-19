@@ -3,9 +3,46 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Enneagram of Personality 九型人格测试</title>
+    <link rel="stylesheet" href="css/material.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/material.min.js"></script>
+    <script src="js/chart.min.js"></script>
+    <script src="js/data.js"></script>
+    <style>
+        .container {
+            margin: auto;
+            margin-top: 16px;
+        }
+    </style>
 </head>
 <body>
 
+    <div class="container demo-card-wide mdl-card mdl-shadow--2dp">
+        <div class="mdl-card__title">
+            <h2 id="nine_title" class="mdl-card__title-text">第20题</h2>
+        </div>
+        <div class="mdl-card__actions mdl-card--border">
+            <ul id="nine_select">
+                <li>
+                    <button id="nine_c_one" name="nine_c" class="mdl-button mdl-button--raised  mdl-button--accent mdl-js-button mdl-js-ripple-effect"></button>
+                </li>
+                <li>
+                    <button id="nine_c_two" name="nine_c" class="mdl-button mdl-button--raised  mdl-button--colored mdl-js-button mdl-js-ripple-effect"></button>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+
+    <div id="container" class="container"></div>
+    <div style="width:30%" class="container">
+        <canvas id="canvas" height="450" width="450"></canvas>
+    </div>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
