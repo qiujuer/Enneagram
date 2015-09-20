@@ -1,5 +1,4 @@
 ﻿<!DOCTYPE html>
-
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
@@ -7,7 +6,6 @@
     <title>Enneagram of Personality 九型人格测试</title>
     <link rel="stylesheet" href="css/material.min.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <script src="js/jquery.min.js"></script>
     <script src="js/material.min.js"></script>
     <script src="js/Chart.min.js"></script>
@@ -45,11 +43,15 @@
             margin: auto;
         }
 
+        #nine_help {
+            text-align: center;
+        }
+
         #canvas {
             margin: auto;
         }
 
-        button {
+        #nine_select button {
             min-height: 120px;
             width: 100%;
             margin: 16px 0;
@@ -60,16 +62,27 @@
             font-size: 20px;
             font-weight: bold;
         }
+
+        #nine_start {
+            color: white;
+            font-size: 20px;
+            margin:16px;
+            width: 120px;
+            height: 120px;
+        }
     </style>
 </head>
 <body>
-    <h2 id="nine_title">第20题</h2>
+    <h1 id="nine_title">Enneagram</h1>
     <div class="container">
-        <div id="nine_select">
-            <button id="nine_c_one" name="nine_c" class="mdl-shadow--2dp mdl-button mdl-js-button mdl-js-ripple-effect nine_c" style="color:deepskyblue;"></button>
-            <button id="nine_c_two" name="nine_c" class="mdl-shadow--2dp mdl-button mdl-js-button mdl-js-ripple-effect nine_c" style="color:orangered;"></button>
+        <div id="nine_help">
+            <h4>请在15分钟内完成<br /><strong>你的感觉胜于一切</strong></h4>
+            <button id="nine_start" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">Start</button>
         </div>
-
+        <div id="nine_select">
+            <button id="nine_c_one" name="nine_c" class="mdl-shadow--3dp mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect nine_c"></button>
+            <button id="nine_c_two" name="nine_c" class="mdl-shadow--3dp mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect nine_c"></button>
+        </div>
         <div id="ninie_result">
             <canvas id="canvas" height="450" width="450"></canvas>
         </div>
