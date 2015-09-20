@@ -5,24 +5,29 @@ var radar;
 
 
 function nineOut(callback) {
-    $("#nine_c_one").fadeOut(180);
-    $("#nine_c_two").fadeOut(200, callback);
+    $("#nine_c_one").fadeOut(100);
+    $("#nine_c_two").fadeOut(100, callback);
 };
 
 function nineIn() {
-    $("#nine_c_one").fadeIn(150, function () {
-        $("#nine_c_two").fadeIn(150);
+    $("#nine_c_one").fadeIn("fast", function () {
+        $(this).removeAttr("data-upgraded");
+        componentHandler.upgradeElement(document.getElementById('nine_c_one'));
+    });
+    $("#nine_c_two").fadeIn("fast", function () {
+        $(this).removeAttr("data-upgraded");
+        componentHandler.upgradeElement(document.getElementById('nine_c_two'));
     });
 };
 
 function setValues(i) {
     var nine = datas[i];
     var count = i + 1;
-    $("#nine_title").text("No. " + count + " - 144");
+    $("#nine_title").html("No. " + count + " - " + (((count * 100 / 144).toFixed(0))) + "%");
     var value = nine[0];
-    $("#nine_c_one").text(value.name).attr("value", value.value);
+    $("#nine_c_one").html(value.name).val(value.value);
     value = nine[1];
-    $("#nine_c_two").text(value.name).attr("value", value.value);
+    $("#nine_c_two").html(value.name).val(value.value);
 };
 
 function getValues(item) {
@@ -62,8 +67,6 @@ $(document).ready(function () {
         responsive: true
     });
 
-    $("#canvas").hide();
-
     $("button[name='nine_c']").click(function () {
         index++;
         if (index >= datas.length)
@@ -78,6 +81,16 @@ $(document).ready(function () {
         }
     });
 
-    // First call set 
-    setValues(index);
+    $("#nine_start").click(function () {
+        $("#nine_help").fadeOut(300, function () {
+            $(this).hide();
+            setValues(index);
+            $("#nine_select").show();
+            nineIn();
+        });
+    });
+
+    // First 
+    $("#canvas").hide();
+    $("#nine_select").hide();
 });
