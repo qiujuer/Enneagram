@@ -38,6 +38,7 @@ function getValues(item) {
 function nineEnd() {
     $("#nine_title").text("Oh~ Good Nice!");
     $("#nine_select").hide();
+    $("#ninie_result").show();
     $("#canvas").show();
 
     for (var i = 0; i < nine_value.length; i++) {
@@ -53,12 +54,12 @@ $(document).ready(function () {
         datasets: [
             {
                 label: "Nine",
-                fillColor: "rgba(220,220,220,0.2)",
-                strokeColor: "rgba(220,220,220,1)",
-                pointColor: "rgba(220,220,220,1)",
-                pointStrokeColor: "#fff",
-                pointHighlightFill: "#fff",
-                pointHighlightStroke: "rgba(220,220,220,1)",
+                fillColor: "rgba(156, 39, 176, 0.4)",
+                strokeColor: "rgba(156, 39, 176, 1)",
+                pointColor: "rgba(156, 39, 176, 0.8)",
+                pointStrokeColor: "#7b1fa2",
+                pointHighlightFill: "#7b1fa2",
+                pointHighlightStroke: "rgba(156, 39, 176, 1)",
                 data: nine_value
             }
         ]
@@ -93,4 +94,5 @@ $(document).ready(function () {
     // First 
     $("#canvas").hide();
     $("#nine_select").hide();
+    $("#ninie_result").hide();
 });
