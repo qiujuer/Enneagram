@@ -8,33 +8,21 @@ body {
     height: 100%;
 }
 
-.body-content-need-push {
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    margin: 0 auto -50px;
-}
-
-.body-content-push {
-    height: 50px;
-}
-
-footer {
+header {
     height: 50px;
     text-transform: Uppercase;
-    background-color: #9c27b0;
     line-height: 50px;
     color: #FFFFFF;
     font-size: 12px;
     text-align: center;
 }
 
-    footer a {
+    header a {
         color: #FFFFFF;
         text-decoration: none;
     }
 
-        footer a:hover {
+        header a:hover {
             color: #FFFFFF;
             text-decoration: underline;
         }
@@ -95,4 +83,14 @@ footer {
 
 .demo-content h3 {
     margin-top: 48px;
+}
+
+#view-source {
+    position: fixed;
+    display: block;
+    right: 0;
+    bottom: 0;
+    margin-right: 40px;
+    margin-bottom: 40px;
+    z-index: 900;
 }
