@@ -3,46 +3,77 @@
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Enneagram of Personality 九型人格测试</title>
-    <link rel="stylesheet" href="css/material.min.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="css/material.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <script src="js/jquery.min.js"></script>
     <script src="js/material.min.js"></script>
     <script src="js/chart.min.js"></script>
     <script src="js/data.js"></script>
     <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
         .container {
             margin: auto;
-            margin-top: 16px;
+            max-width: 720px;
+            min-height: 200px;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        #nine_select {
+            margin: 0px;
+            padding: 16px 10px;
+        }
+
+        #nine_title {
+            margin: auto;
+            text-align: center;
+            background-color: #3F51B5;
+            color: white;
+            padding: 46px 0;
+            font-size: 36px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #ninie_result {
+            max-width: 640px;
+            margin: auto;
+        }
+
+        #canvas {
+            margin: auto;
+        }
+
+        button {
+            min-height: 120px;
+            width: 100%;
+            margin: 16px 0;
+        }
+
+        .nine_c {
+            font-family: 宋体;
+            font-size: 20px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
-
-    <div class="container demo-card-wide mdl-card mdl-shadow--2dp">
-        <div class="mdl-card__title">
-            <h2 id="nine_title" class="mdl-card__title-text">第20题</h2>
+    <h2 id="nine_title">第20题</h2>
+    <div class="container">
+        <div id="nine_select">
+            <button id="nine_c_one" name="nine_c" class="mdl-shadow--2dp mdl-button mdl-js-button mdl-js-ripple-effect nine_c" style="color:deepskyblue;"></button>
+            <button id="nine_c_two" name="nine_c" class="mdl-shadow--2dp mdl-button mdl-js-button mdl-js-ripple-effect nine_c" style="color:orangered;"></button>
         </div>
-        <div class="mdl-card__actions mdl-card--border">
-            <ul id="nine_select">
-                <li>
-                    <button id="nine_c_one" name="nine_c" class="mdl-button mdl-button--raised  mdl-button--accent mdl-js-button mdl-js-ripple-effect"></button>
-                </li>
-                <li>
-                    <button id="nine_c_two" name="nine_c" class="mdl-button mdl-button--raised  mdl-button--colored mdl-js-button mdl-js-ripple-effect"></button>
-                </li>
-            </ul>
 
+        <div id="ninie_result">
+            <canvas id="canvas" height="450" width="450"></canvas>
         </div>
     </div>
-
-    <div id="container" class="container"></div>
-    <div style="width:30%" class="container">
-        <canvas id="canvas" height="450" width="450"></canvas>
-    </div>
-
     <script src="js/main.js"></script>
 </body>
 </html>
