@@ -3,21 +3,22 @@ var nine_value = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 var index = 0;
 var radar;
 
+
 function nineOut(callback) {
-    $("#nine_c_two").fadeOut(100, function () {
-        $("#nine_c_one").fadeOut(100, callback);
-    });
+    $("#nine_c_one").fadeOut(180);
+    $("#nine_c_two").fadeOut(200, callback);
 };
 
 function nineIn() {
-    $("#nine_c_one").fadeIn("fast", function () {
-        $("#nine_c_two").fadeIn("fast");
+    $("#nine_c_one").fadeIn(150, function () {
+        $("#nine_c_two").fadeIn(150);
     });
 };
 
 function setValues(i) {
     var nine = datas[i];
-    $("#nine_title").text("第" + (i + 1) + "题");
+    var count = i + 1;
+    $("#nine_title").text("No. " + count + " - 144");
     var value = nine[0];
     $("#nine_c_one").text(value.name).attr("value", value.value);
     value = nine[1];
@@ -27,13 +28,13 @@ function setValues(i) {
 function getValues(item) {
     var i = item.attr("value");
     nine_value[i]++;
-
-    $("#container").text(nine_value);
-
-    nineEnd();
 };
 
 function nineEnd() {
+    $("#nine_title").text("Oh~ Good Nice!");
+    $("#nine_select").hide();
+    $("#canvas").show();
+
     for (var i = 0; i < nine_value.length; i++) {
         radar.datasets[0].points[i].value = nine_value[i];
     }
@@ -61,20 +62,22 @@ $(document).ready(function () {
         responsive: true
     });
 
-    $("button[name='nine_c']").click(function () {
-        var item = $(this);
-        nineOut(function () {
-            getValues(item);
+    $("#canvas").hide();
 
-            index++;
-            if (index >= datas.length)
-                nineEnd();
-            else {
+    $("button[name='nine_c']").click(function () {
+        index++;
+        if (index >= datas.length)
+            nineEnd();
+        else {
+            var item = $(this);
+            nineOut(function () {
+                getValues(item);
                 setValues(index);
                 nineIn();
-            }
-        });
+            });
+        }
     });
 
+    // First call set 
     setValues(index);
 });
