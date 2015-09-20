@@ -1,0 +1,105 @@
+﻿html {
+    height: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif, 'Microsoft YaHei',新宋体,宋体;
+    min-height: 100%;
+    height: 100%;
+}
+
+.container {
+    margin: auto;
+    max-width: 720px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.body-content-need-push {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -50px;
+}
+
+.body-content-push {
+    height: 50px;
+}
+
+footer {
+    height: 50px;
+    text-transform: Uppercase;
+    background-color: #9c27b0;
+    line-height: 50px;
+    color: #FFFFFF;
+    font-size: 12px;
+    text-align: center;
+}
+
+    footer a {
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+        footer a:hover {
+            color: #FFFFFF;
+            text-decoration: underline;
+        }
+
+
+#nine_select {
+    margin: 0px;
+    padding: 16px 10px;
+}
+
+#nine_title {
+    margin: auto;
+    text-align: center;
+    background-color: #7b1fa2;
+    color: white;
+    padding: 46px 0;
+    font-size: 36px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+#ninie_result {
+    max-width: 640px;
+    margin: auto;
+    align-content: center;
+    text-align: center;
+    padding-bottom: 16px;
+}
+
+    #ninie_result a {
+        vertical-align: middle;
+        min-height: 40px;
+        min-width: 120px;
+    }
+
+#nine_help {
+    text-align: center;
+}
+
+#canvas {
+    margin: auto;
+}
+
+#nine_select button {
+    min-height: 120px;
+    width: 100%;
+    margin: 16px 0;
+}
+
+.nine_c {
+    font-family: 宋体;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#nine_start {
+    color: white;
+    font-size: 20px;
+    margin: 16px;
+    width: 120px;
+    height: 120px;
+}

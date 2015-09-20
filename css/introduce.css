@@ -1,0 +1,98 @@
+﻿html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Microsoft YaHei', Arial, Helvetica, sans-serif, 新宋体,宋体;
+    min-height: 100%;
+    height: 100%;
+}
+
+.body-content-need-push {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -50px;
+}
+
+.body-content-push {
+    height: 50px;
+}
+
+footer {
+    height: 50px;
+    text-transform: Uppercase;
+    background-color: #9c27b0;
+    line-height: 50px;
+    color: #FFFFFF;
+    font-size: 12px;
+    text-align: center;
+}
+
+    footer a {
+        color: #FFFFFF;
+        text-decoration: none;
+    }
+
+        footer a:hover {
+            color: #FFFFFF;
+            text-decoration: underline;
+        }
+
+.demo-ribbon {
+    width: 100%;
+    height: 40vh;
+    background-color: #7b1fa2;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+.demo-main {
+    margin-top: -35vh;
+    -webkit-flex-shrink: 0;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+}
+
+.demo-header .mdl-layout__header-row {
+    padding-left: 40px;
+}
+
+.demo-container {
+    max-width: 1600px;
+    width: calc(100% - 16px);
+    margin: 0 auto;
+}
+
+.demo-content {
+    border-radius: 2px;
+    padding: 80px 56px;
+    margin-bottom: 80px;
+    font-family: 'Microsoft YaHei', 宋体;
+}
+
+    .demo-content h1 {
+        font-family: 'Microsoft YaHei', 新宋体,宋体;
+    }
+
+    .demo-content h4 {
+        font-family: 'Microsoft YaHei', 新宋体,宋体;
+        font-size: 20px;
+    }
+
+    .demo-content p {
+        font-family: 'Microsoft YaHei', 新宋体,宋体;
+        font-size: 14px;
+        text-indent: 16px;
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+
+.demo-layout.is-small-screen .demo-content {
+    padding: 40px 28px;
+}
+
+.demo-content h3 {
+    margin-top: 48px;
+}

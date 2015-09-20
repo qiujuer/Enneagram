@@ -3,90 +3,38 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Enneagram of Personality 九型人格测试</title>
+    <title>Enneagram of Personality</title>
     <link rel="stylesheet" href="css/material.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/main.css" />
     <script src="js/jquery.min.js"></script>
     <script src="js/material.min.js"></script>
     <script src="js/Chart.min.js"></script>
     <script src="js/data.js"></script>
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        .container {
-            margin: auto;
-            max-width: 720px;
-            min-height: 200px;
-            padding-top: 20px;
-            padding-bottom: 20px;
-        }
-
-        #nine_select {
-            margin: 0px;
-            padding: 16px 10px;
-        }
-
-        #nine_title {
-            margin: auto;
-            text-align: center;
-            background-color: #3F51B5;
-            color: white;
-            padding: 46px 0;
-            font-size: 36px;
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        #ninie_result {
-            max-width: 640px;
-            margin: auto;
-        }
-
-        #nine_help {
-            text-align: center;
-        }
-
-        #canvas {
-            margin: auto;
-        }
-
-        #nine_select button {
-            min-height: 120px;
-            width: 100%;
-            margin: 16px 0;
-        }
-
-        .nine_c {
-            font-family: 宋体;
-            font-size: 20px;
-            font-weight: bold;
-        }
-
-        #nine_start {
-            color: white;
-            font-size: 20px;
-            margin:16px;
-            width: 120px;
-            height: 120px;
-        }
-    </style>
 </head>
 <body>
-    <h1 id="nine_title">Enneagram</h1>
-    <div class="container">
-        <div id="nine_help">
-            <h4>请在15分钟内完成<br /><strong>你的感觉胜于一切</strong></h4>
-            <button id="nine_start" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">Start</button>
+    <div class="body-content-need-push">
+        <h1 id="nine_title">九型人格测试</h1>
+        <div class="container">
+            <div id="nine_help">
+                <h4>请在15分钟内完成<br /><strong>你的感觉胜于一切</strong></h4>
+                <button id="nine_start" class="mdl-button mdl-js-button mdl-button--fab mdl-js-ripple-effect mdl-button--colored">Start</button>
+            </div>
+            <div id="nine_select">
+                <button id="nine_c_one" name="nine_c" class="mdl-button mdl-js-button mdl-button--raised mdl-button--colored mdl-js-ripple-effect nine_c"></button>
+                <button id="nine_c_two" name="nine_c" class="mdl-button mdl-js-button mdl-button--raised mdl-button--accent mdl-js-ripple-effect nine_c"></button>
+            </div>
+            <div id="ninie_result">
+                <canvas id="canvas" height="450" width="450"></canvas>
+                <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast" target="_blank" href="introduce.html">详解</a>
+            </div>
         </div>
-        <div id="nine_select">
-            <button id="nine_c_one" name="nine_c" class="mdl-shadow--3dp mdl-button mdl-js-button mdl-button--accent mdl-js-ripple-effect nine_c"></button>
-            <button id="nine_c_two" name="nine_c" class="mdl-shadow--3dp mdl-button mdl-js-button mdl-button--primary mdl-js-ripple-effect nine_c"></button>
-        </div>
-        <div id="ninie_result">
-            <canvas id="canvas" height="450" width="450"></canvas>
-        </div>
+        <div class="body-content-push"></div>
     </div>
+    <footer class="text-center">
+        <a href="https://github.com/qiujuer/Enneagram">GitHub</a>
+        &nbsp;&nbsp;
+        <a href="https://mobile.alipay.com/index.htm" title="赞助我，欢迎付款到支付宝：qiujuer@live.cn">赞助我, 支付宝: <b>{ qiujuer@live.cn }</b></a>
+    </footer>
     <script src="js/main.js"></script>
 </body>
 </html>
