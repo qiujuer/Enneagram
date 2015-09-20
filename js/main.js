@@ -5,16 +5,16 @@ var radar;
 
 
 function nineOut(callback) {
-    $("#nine_c_one").fadeOut("fast");
-    $("#nine_c_two").fadeOut("fast", callback);
+    $("#nine_c_one").fadeOut(100);
+    $("#nine_c_two").fadeOut(100, callback);
 };
 
 function nineIn() {
-    $("#nine_c_one").fadeIn(150, function () {
+    $("#nine_c_one").fadeIn("fast", function () {
         $(this).removeAttr("data-upgraded");
         componentHandler.upgradeElement(document.getElementById('nine_c_one'));
     });
-    $("#nine_c_two").fadeIn(150, function () {
+    $("#nine_c_two").fadeIn("fast", function () {
         $(this).removeAttr("data-upgraded");
         componentHandler.upgradeElement(document.getElementById('nine_c_two'));
     });
@@ -23,7 +23,7 @@ function nineIn() {
 function setValues(i) {
     var nine = datas[i];
     var count = i + 1;
-    $("#nine_title").html("No. " + count + " - 144");
+    $("#nine_title").html("No. " + count + " - " + (((count * 100 / 144).toFixed(0))) + "%");
     var value = nine[0];
     $("#nine_c_one").html(value.name).val(value.value);
     value = nine[1];
