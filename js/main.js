@@ -5,17 +5,15 @@ var radar;
 
 
 function nineOut(callback) {
-    $("#nine_c_one").fadeOut(100);
-    $("#nine_c_two").fadeOut(100, callback);
+    $("#nine_select").fadeOut(280, callback);
 };
 
 function nineIn() {
-    $("#nine_c_one").fadeIn("fast", function () {
-        $(this).removeAttr("data-upgraded");
+    $("#nine_select").fadeIn(280, function () {
+        $("#nine_c_one").removeAttr("data-upgraded");
         componentHandler.upgradeElement(document.getElementById('nine_c_one'));
-    });
-    $("#nine_c_two").fadeIn("fast", function () {
-        $(this).removeAttr("data-upgraded");
+
+        $("#nine_c_two").removeAttr("data-upgraded");
         componentHandler.upgradeElement(document.getElementById('nine_c_two'));
     });
 };
