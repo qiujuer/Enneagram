@@ -5,17 +5,19 @@ var radar;
 
 
 function nineOut(callback) {
-    $("#nine_select").fadeOut(280, callback);
+    $("#nine_c_one_txt").fadeOut("fast");
+    $("#nine_c_two_txt").fadeOut("fast", callback);
 };
 
 function nineIn() {
-    $("#nine_select").fadeIn(280, function () {
-        $("#nine_c_one").removeAttr("data-upgraded");
-        componentHandler.upgradeElement(document.getElementById('nine_c_one'));
-
-        $("#nine_c_two").removeAttr("data-upgraded");
-        componentHandler.upgradeElement(document.getElementById('nine_c_two'));
-    });
+    $("#nine_c_one_txt").fadeIn("fast");
+    $("#nine_c_two_txt").fadeIn("fast");
+    /*
+    $("#nine_c_one").removeAttr("data-upgraded");
+    componentHandler.upgradeElement(document.getElementById('nine_c_one'));
+    $("#nine_c_two").removeAttr("data-upgraded");
+    componentHandler.upgradeElement(document.getElementById('nine_c_two'));
+    */
 };
 
 function setValues(i) {
@@ -23,9 +25,11 @@ function setValues(i) {
     var count = i + 1;
     $("#nine_title").html("No. " + count + " - " + (((count * 100 / 144).toFixed(0))) + "%");
     var value = nine[0];
-    $("#nine_c_one").html(value.name).val(value.value);
+    $("#nine_c_one").val(value.value);
+    $("#nine_c_one_txt").html(value.name);
     value = nine[1];
-    $("#nine_c_two").html(value.name).val(value.value);
+    $("#nine_c_two").val(value.value);
+    $("#nine_c_two_txt").html(value.name);
 };
 
 function getValues(item) {
